@@ -5,7 +5,7 @@ export default function RoutesManager() {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/home" element={<HomeRoute />} />
+                <Route path="/" element={<HomeRoute />} />
             </Routes>
         </BrowserRouter>
     )

@@ -4,8 +4,8 @@ import SlideIn from "../../atoms/slide-in/slide-in";
 import SmallTitle from "../../atoms/small-title/small-title";
 import myPhoto from "../../../assets/myPhoto.png";
 import githubIcon from "../../../assets/icons/github-icon.svg";
-import style from "./style.module.css";
 import MainIconButton from "../../atoms/main-icon-button/main-icon-button";
+import style from "./style.module.css";
 
 export default function Home() {
     return (

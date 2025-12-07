@@ -4,12 +4,13 @@
     --dark-primary:#6D28D9;
  	--on-primary: #ffffff;
 	
+	--header: #E9E2FF;
+
 	--secondary: #F9A8D4 ;
 	--on-secondary: #ffffff;
 
     --accent: #EC4899; 
     --on-accent: #ffffff;
-
     --text: #444444; 
 
 	--disabled: #676767;
@@ -21,7 +22,7 @@
 	--surface: #d8dae0;
 	--on-surface: #191c20;
 
-	--background: #F5F3FF;
+	--background: #ffffff;
 	--on-background: #63607A;
 
 	--max-width: 1920px;

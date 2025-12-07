@@ -1,4 +1,4 @@
-import style from "./slidein.module.css";
+import style from "./style.module.css";
 
 type Props = {
     children: React.ReactNode;
