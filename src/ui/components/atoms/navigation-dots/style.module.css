@@ -1,0 +1,27 @@
+.container {
+  position: fixed;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.container a {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text); 
+  mix-blend-mode: difference;          
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  display: block;
+}
+
+.container a.active,
+.container a:hover {
+  background-color: var(--primary);
+  mix-blend-mode: normal; 
+  transform: scale(1.2);
+}

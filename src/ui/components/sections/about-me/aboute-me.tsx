@@ -7,9 +7,13 @@ import githubIcon from "../../../assets/icons/github-icon.svg";
 import MainIconButton from "../../atoms/main-icon-button/main-icon-button";
 import style from "./style.module.css";
 
-export default function Home() {
+type Props = {
+    id: string;
+}
+
+export default function AbouteMeSection({ id }: Props) {
     return (
-        <section className={style.container}>
+        <section id={id} className={style.container}>
             
             <div className={style.leftSide}>
 
