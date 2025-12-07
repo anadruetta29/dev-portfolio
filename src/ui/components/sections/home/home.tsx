@@ -16,7 +16,6 @@ export default function HomeSection({ id }: Props) {
                     <img src={computerAndPeople} alt="computer and people" />
                 </FadeIn>
             </div>
-    
         </section>
     );
 }

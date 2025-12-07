@@ -1,6 +1,7 @@
 import NavigationDots from "../../components/atoms/navigation-dots/navigation-dots";
 import AbouteMeSection from "../../components/sections/about-me/aboute-me";
 import HomeSection from "../../components/sections/home/home";
+import SkillsSection from "../../components/sections/skills/skills";
 import Layout from "../../layout/layout";
 import ViewModel from "./viewmodel";
 
@@ -13,16 +14,13 @@ export default function HomeRoute() {
 
             <HomeSection id="home" />
 
+            
+            <AbouteMeSection id="about-me" />
+        
 
-            <section id="about-me">
-                <AbouteMeSection id="about-me" />
-            </section>
+            <SkillsSection id="skills" />
 
-            {/* <section id="skills">
-                <Skills />
-            </section>
-
-            <section id="projects">
+            {/* <section id="projects">
                 <Projects />
             </section>
 
