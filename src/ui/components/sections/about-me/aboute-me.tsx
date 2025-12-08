@@ -3,7 +3,7 @@ import LargeTitle from "../../atoms/large-title/large-title";
 import SlideIn from "../../atoms/slide-in/slide-in";
 import SmallTitle from "../../atoms/small-title/small-title";
 import myPhoto from "../../../assets/myPhoto.png";
-import githubIcon from "../../../assets/icons/github-icon.svg";
+import githubIcon from "../../../assets/icons/github.svg";
 import MainIconButton from "../../atoms/main-icon-button/main-icon-button";
 import style from "./style.module.css";
 
