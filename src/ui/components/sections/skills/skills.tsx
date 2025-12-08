@@ -15,7 +15,7 @@ export default function SkillsSection({ id }: Props) {
 
             <div className={style.title}>
                 <FadeIn delay={0.1}>
-                        <MediumTitle text="Tecnologías" />
+                    <MediumTitle text="Tecnologías" />
                 </FadeIn>
             </div>
             <div className={style.technologies}>
