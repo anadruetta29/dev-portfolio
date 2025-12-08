@@ -14,7 +14,7 @@
 .middleInformation {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
     z-index: 2;
     color: var(--on-primary)
 }
