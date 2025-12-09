@@ -52,17 +52,26 @@
     border: 3px solid var(--on-primary);
 }
 
-.yearContainer p {
+.yearGithubContainer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.yearGithubContainer p {
     color: var(--on-primary);
 }
 
-.githubContainer a {
-    display: inline-block;
-    color: var(--primary);
+.yearGithubContainer a {
+    color: var(--on-primary); 
     text-decoration: none;
-    transition: color 0.2s ease;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
 }
 
-.githubContainer a:hover {
+.yearGithubContainer a:hover {
     color: var(--primary);
 }
+

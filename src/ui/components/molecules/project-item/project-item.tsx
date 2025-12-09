@@ -39,20 +39,14 @@ export default function ProjectItem({
                 ))}
             </div>
 
-            {year && (
-                <div className={style.yearContainer}>
+            {year && githubLink && (
+                <div className={style.yearGithubContainer}>
                     <p>{year}</p>
-                </div>
-            )}
-
-            {githubLink && (
-                <div className={style.githubContainer}>
                     <a href={githubLink}>
                         Ver código
                     </a>
                 </div>
             )}
-
         </div>
     );
 }

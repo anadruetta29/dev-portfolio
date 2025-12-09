@@ -1,6 +1,7 @@
 import FadeIn from "../../atoms/fade-in/fade-in";
 import ProjectItem from "../../molecules/project-item/project-item";
 import fortuneUI from "../../../assets/ui-projects/fortune.svg";
+import portfolioUI from "../../../assets/ui-projects/dev-portfolio.png";
 import MediumTitle from "../../atoms/medium-title/medium-title";
 import style from "./style.module.css";
 
@@ -28,6 +29,16 @@ export default function ProjectsSection({ id }: Props) {
                     githubLink="https://github.com/2piradrian/seminario-client.git"
 
                 />
+                <ProjectItem
+                    title="Portafolio Personal"
+                    description="Portafolio moderno y responsive desarrollado para presentar mis proyectos, experiencia y 
+                    habilidades como desarrolladora. Incluye diseño UI/UX propio, componentes reutilizables, secciones dinámicas, y 
+                    animaciones suaves. Implementado con React y TypeScript, utilizando CSS Modules y prácticas de arquitectura limpia."
+                    image={portfolioUI}  
+                    technologies={["React", "TypeScript", "CSS Modules", "Figma"]}
+                    year="2024"
+                    githubLink="https://github.com/anadruetta29/dev-portfolio.git"
+                /> 
             </div>
         </section> 
     )

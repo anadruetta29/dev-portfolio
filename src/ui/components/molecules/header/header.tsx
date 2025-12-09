@@ -7,8 +7,8 @@ export default function Header() {
                 <nav className={style.nav}>
                     <a href="#about-me">Sobre mí</a>
                     <a href="#skills">Skills</a>
-                    <a href="#proyectos">Proyectos</a>
-                    <a href="#contacto">Contacto</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#contact">Contacto</a>
                 </nav>
             </div>
         </header>
