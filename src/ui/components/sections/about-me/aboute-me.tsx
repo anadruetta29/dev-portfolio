@@ -1,7 +1,6 @@
 import FadeIn from "../../atoms/fade-in/fade-in";
 import LargeTitle from "../../atoms/large-title/large-title";
 import SlideIn from "../../atoms/slide-in/slide-in";
-import SmallTitle from "../../atoms/small-title/small-title";
 import myPhoto from "../../../assets/myPhoto.png";
 import githubIcon from "../../../assets/icons/github.svg";
 import MainIconButton from "../../atoms/main-icon-button/main-icon-button";
@@ -18,12 +17,13 @@ export default function AbouteMeSection({ id }: Props) {
             <div className={style.leftSide}>
 
                 <FadeIn delay={0}>
-                    <SmallTitle text="Desarrolladora de Software" />
+                    <div className={style.roleTag}>Desarrolladora de Software</div>
                 </FadeIn>
 
                 <FadeIn delay={0.2}>
                     <LargeTitle text="Hola! Soy Ana" />
                 </FadeIn>
+
 
                 <FadeIn delay={0.4}>
                     <p className={style.description}>

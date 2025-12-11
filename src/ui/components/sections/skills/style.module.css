@@ -1,69 +1,79 @@
 .container { 
 	width: 100%; 
 	min-height: 100vh; 
-	padding: 100px 50px 50px; 
+	padding: 120px 80px 80px; 
 	background-color: var(--dark-primary); 
 	display: flex;
 	flex-direction: column; 
-	justify-content: flex-start; 
 	align-items: center; 
 	position: relative; 
 	overflow: hidden; 
 } 
 
 .title { 
-	margin-bottom: 20px; 
-	color: var(--on-primary); 
-	text-align: center;  
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;  
-	padding-right: 250px;
-} 
+	justify-content: center;  
+	margin-bottom: 60px; 
+}
 
 .title h2 {
-    position: relative;
+	color: var(--on-primary);
+	font-size: 42px;
+	font-weight: 700;
+	position: relative;
+	text-align: center;
+	letter-spacing: 0.5px;
 }
 
 .title h2::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;          
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;             
-    height: 4px;           
-    background-color: var(--on-primary);
-    border-radius: 4px;    
-    opacity: 0.9;          
+	content: "";
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 140px;
+	height: 3px;
+	background-color: var(--on-primary);
+	border-radius: 4px;
+	opacity: 0.9;
 }
 
 
 .technologies { 
-	display: flex; 
-	flex-direction: column; 
-	gap: 40px !important; 
 	width: 100%; 
-	max-width: 1200px;   
-	align-self: flex-start;  
-	text-align: left; 
-	padding-left: 200px;
-} 
+	max-width: 1100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px 60px; 
+}
 
-.technologies h3 { 
-	color: var(--on-primary) !important; 
-} 
+.categoryCard {
+	background: var(--surface-glass-medium);
+	border: 1px solid var(--surface-glass-low);
+	backdrop-filter: blur(6px);
+	padding: 22px 28px;
+	border-radius: 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	transition: background 0.25s ease, transform 0.2s ease;
+}
 
-.frontend, .backend, .deploy, .vsc { 
-	width: 100%; 
-	display: flex; 
-	flex-direction: column; 
-	align-items: flex-start; 
-	gap: 8px; 
+.categoryCard:hover {
+	background: var(--surface-glass-low);
+	transform: translateY(-3px);
+}
+
+.categoryCard h3 { 
+	color: var(--on-primary) !important;
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 4px;
 }
 
 .chipRow { 
 	display: flex; 
 	flex-wrap: wrap; 
-	gap: 15px; 
+	gap: 12px 16px; 
 }

@@ -4,48 +4,38 @@ import style from "./style.module.css";
 type Props = {
     title: string;
     description: string;
-    image: string;
     technologies: string[];
     githubLink?: string;
     year: string;
 };
 
-export default function ProjectItem({  
-    title, 
-    description, 
-    image, 
-    technologies, 
-    githubLink, 
-    year 
+export default function ProjectItem({
+    title,
+    description,
+    technologies,
+    githubLink,
+    year
 }: Props) {
     return (
         <div className={style.container}>
 
-            <div className={style.imageContainer}>
-                <img src={image} alt={title} />
-            </div>
-
-            <div className={style.titleContainer}>
+            <header className={style.header}>
                 <SmallTitle text={title} />
-            </div>
+                <span className={style.year}>{year}</span>
+            </header>
 
-            <div className={style.descriptionContainer}>
-                <p>{description}</p>
-            </div>
+            <p className={style.description}>{description}</p>
 
-            <div className={style.technologiesContainer}>
+            <div className={style.techList}>
                 {technologies.map((tech) => (
                     <span key={tech} className={style.techTag}>{tech}</span>
                 ))}
             </div>
 
-            {year && githubLink && (
-                <div className={style.yearGithubContainer}>
-                    <p>{year}</p>
-                    <a href={githubLink}>
-                        Ver código
-                    </a>
-                </div>
+            {githubLink && (
+                <a href={githubLink} className={style.githubButton} target="_blank">
+                    Ver código →
+                </a>
             )}
         </div>
     );
