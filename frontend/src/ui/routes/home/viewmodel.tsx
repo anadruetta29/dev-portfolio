@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { Project } from "../../../domain/entity/Project";
 
 export default function ViewModel() {
@@ -31,7 +32,40 @@ export default function ViewModel() {
     // ------------------------------------------
     // EMAIL ACTION
     // ------------------------------------------
-    const onClickOnSendEmail = async () => {};
+    const onClickOnSendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault(); 
+
+        const form = event.currentTarget;
+
+        try {
+            const formData = new FormData(event.currentTarget);
+            const data = Object.fromEntries(formData) as {
+                name?: string;
+                email?: string;
+                message?: string;
+            };
+
+            const response = await fetch("http://localhost:4000/api/email/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (result.ok) {
+                toast.success("Mensaje enviado correctamente");
+                event.currentTarget.reset();
+            } 
+            else {
+                toast.error("Error enviando mensaje: " + result.msg);
+            }
+
+        } catch (error) {
+            console.error("Error enviando mensaje:", error);
+            toast.error("Error enviando mensaje");
+        }
+    };
 
     // ------------------------------------------
     // PROJECTS CAROUSEL

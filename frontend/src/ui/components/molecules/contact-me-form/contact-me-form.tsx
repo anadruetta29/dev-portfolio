@@ -23,7 +23,7 @@ export default function ContactMeForm( {onClick}: Props) {
                 required
             />
             <InputLabel 
-                id="description"
+                id="message"
                 placeholder="Ingresa tu consulta"
                 type="text"
                 required
