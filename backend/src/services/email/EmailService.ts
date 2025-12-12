@@ -2,48 +2,44 @@ import nodemailer, { Transporter } from 'nodemailer';
 import dotenv from 'dotenv';
 import { SendMailOptions } from './SendMailOptions';
 
-
 dotenv.config();
 
-
 export class EmailService {
-  private transporter: Transporter;
+  	private transporter: Transporter;
 
 
-  constructor() {
-    this.transporter = nodemailer.createTransport({
-      service: process.env.MAILER_SERVICE,
-      auth: {
-        user: process.env.MAILER_EMAIL,      
-        pass: process.env.MAILER_SECRET_KEY,  
-      },
-    });
-  }
+  	constructor() {
+    	this.transporter = nodemailer.createTransport({
+			host: process.env.SMTP_HOST,
+			port: Number(process.env.SMTP_PORT),
+			secure: false,
+			auth: {
+				user: process.env.SMTP_USER,
+				pass: process.env.SMTP_PASS,
+			}
+		});
+  	}	
 
+  	async sendContactEmail(options: SendMailOptions): Promise<boolean> {
+    	const { name, email, message, attachments = [] } = options;
 
-  async sendContactEmail(options: SendMailOptions): Promise<boolean> {
-    const { name, email, message, attachments = [] } = options;
-
-
-    try {
-      const info = await this.transporter.sendMail({
-        from: `"${name}" <${process.env.MAILER_EMAIL}>`,
-        to: process.env.MAILER_EMAIL,                  
-        subject: `Nuevo mensaje de ${name}`,
-        html: `
-          <p><strong>De:</strong> ${name} (${email})</p>
-            <p><strong>Mensaje:</strong></p>
-            <p>${message}</p>
-          `
-        ,
-        attachments,
-      });
-
-
-      return !!(info && info.accepted.length);
-    } catch (error) {
-      console.error("Error enviando email:", error);
-      return false;
-    }
-  }
+    	try {
+			const info = await this.transporter.sendMail({
+				from: `${name}`,
+				replyTo: `${name} <${email}>`,
+				to: process.env.SMTP_USER,
+				subject: `Nuevo mensaje de ${name}`,
+				html: `
+					<p><strong>De:</strong> ${name} (${email})</p>
+					<p><strong>Mensaje:</strong></p>
+					<p>${message}</p>
+				`
+			});
+      	return !!(info && info.accepted.length);
+    	} 
+		catch (error) {
+      		console.error("Error enviando email:", error);
+      		return false;
+    	}
+  	}
 }

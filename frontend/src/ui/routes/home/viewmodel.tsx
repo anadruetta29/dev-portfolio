@@ -4,8 +4,6 @@ import { Project } from "../../../domain/entity/Project";
 
 
 export default function ViewModel() {
-
-
     // ------------------------------------------
     // SECTION SCROLL LISTENER
     // ------------------------------------------
@@ -14,7 +12,6 @@ export default function ViewModel() {
 
     useEffect(() => {
         const sections = document.querySelectorAll("section");
-
 
         function handleScroll() {
             let current = "home";
@@ -27,15 +24,12 @@ export default function ViewModel() {
                 }
             });
 
-
             setActiveSection(current);
         }
-
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
 
     // ------------------------------------------
     // EMAIL ACTION
@@ -43,32 +37,26 @@ export default function ViewModel() {
     const onClickOnSendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-
         const form = event.currentTarget;
 
-
         try {
-            const formData = new FormData(event.currentTarget);
-const data = Object.fromEntries(formData) as {
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData) as {
                 name?: string;
                 email?: string;
                 message?: string;
             };
 
-
             const response = await fetch("http://localhost:4000/api/email/send", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
             });
-
 
             const result = await response.json();
 
-
             if (result.ok) {
                 toast.success("Mensaje enviado correctamente");
-                event.currentTarget.reset();
             }
             else {
                 toast.error("Error enviando mensaje: " + result.msg);
@@ -80,7 +68,6 @@ const data = Object.fromEntries(formData) as {
             toast.error("Error enviando mensaje");
         }
     };
-
 
     // ------------------------------------------
     // PROJECTS CAROUSEL
@@ -101,9 +88,7 @@ const data = Object.fromEntries(formData) as {
         )
     ];
 
-
     const [currentProject, setCurrentProject] = useState(0);
-
 
     const next = () => {
         triggerFade();
@@ -112,7 +97,6 @@ const data = Object.fromEntries(formData) as {
         );
     };
 
-
     const prev = () => {
         triggerFade();
         setCurrentProject((prev) =>
@@ -120,11 +104,7 @@ const data = Object.fromEntries(formData) as {
         );
     };
 
-
     const current = projects[currentProject];
-
-
-
 
     // ------------------------------------------
     // FADE ANIMATION
@@ -135,10 +115,7 @@ const data = Object.fromEntries(formData) as {
     const triggerFade = () => {
         setIsFading(true);
         setTimeout(() => setIsFading(false), 300);
-};
-
-
-
+    };
 
     return {
         activeSection,

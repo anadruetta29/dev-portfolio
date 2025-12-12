@@ -5,7 +5,7 @@ import style from "./style.module.css";
 
 
 type Props = {
-    onClick: () => void;
+    onClick: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 export default function ContactMeForm( {onClick}: Props) {
     return(
