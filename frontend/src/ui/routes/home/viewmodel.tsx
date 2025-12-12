@@ -57,16 +57,11 @@ export default function ViewModel() {
 
             if (result.ok) {
                 alert("Mensaje enviado correctamente");
+                form.reset();
             }
-            else {
-                alert("Error enviando mensaje");
-            }
-
-
         } 
         catch (error) {
-            console.error("Error enviando mensaje:", error);
-            toast.error("Error enviando mensaje");
+            alert("Error enviando mensaje");
         }
     };
 
