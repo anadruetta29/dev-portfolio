@@ -10,18 +10,24 @@ export class EmailController {
   }
 
   send = async (req: Request, res: Response) => {
-    const { name, email, message } = req.body;
+    const { to, subject, htmlBody, attachements } = req.body as SendMailOptions;
 
     try {
-      const success = await this.emailService.sendContactEmail({ name, email, message });
+      const success = await this.emailService.sendEmail({
+        to,
+        subject,
+        htmlBody,
+        attachements,
+      });
 
-      if (!success) return res.status(400).json({ ok: false, msg: "Error enviando email" });
+      if (!success) {
+        return res.status(400).json({ ok: false, msg: "Error enviando email" });
+      }
 
-      return res.json({ ok: true, msg: "Mensaje enviado correctamente" });
+      return res.json({ ok: true, msg: "Email enviado correctamente" });
     } catch (error) {
-      console.error(error);
+      console.error("Error en EmailController:", error);
       return res.status(500).json({ ok: false, msg: "Error interno" });
     }
   };
-
 }
