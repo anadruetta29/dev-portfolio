@@ -7,7 +7,7 @@ import style from "./style.module.css";
 
 type Props = {
     id: string;
-    onClickOnSendEmail: () => void;
+    onClickOnSendEmail: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 
 export default function ContactSection({ id, onClickOnSendEmail }: Props) {

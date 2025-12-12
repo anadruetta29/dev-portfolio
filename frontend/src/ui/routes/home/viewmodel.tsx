@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { Project } from "../../../domain/entity/Project";
 
-export default function ViewModel() {
 
+export default function ViewModel() {
     // ------------------------------------------
     // SECTION SCROLL LISTENER
     // ------------------------------------------
     const [activeSection, setActiveSection] = useState("home");
+
 
     useEffect(() => {
         const sections = document.querySelectorAll("section");
@@ -14,6 +16,7 @@ export default function ViewModel() {
         function handleScroll() {
             let current = "home";
             const scrollPos = window.scrollY + 200;
+
 
             sections.forEach((section) => {
                 if (scrollPos >= section.offsetTop) {
@@ -31,7 +34,40 @@ export default function ViewModel() {
     // ------------------------------------------
     // EMAIL ACTION
     // ------------------------------------------
-    const onClickOnSendEmail = async () => {};
+    const onClickOnSendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+
+        try {
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData) as {
+                name?: string;
+                email?: string;
+                message?: string;
+            };
+
+            const response = await fetch("http://localhost:4000/api/email/send", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (result.ok) {
+                toast.success("Mensaje enviado correctamente");
+            }
+            else {
+                toast.error("Error enviando mensaje: " + result.msg);
+            }
+
+
+        } catch (error) {
+            console.error("Error enviando mensaje:", error);
+            toast.error("Error enviando mensaje");
+        }
+    };
 
     // ------------------------------------------
     // PROJECTS CAROUSEL
@@ -40,8 +76,7 @@ export default function ViewModel() {
         new Project(
             "ForTune",
             "ForTune es una aplicación web orientada a músicos que buscan oportunidades laborales, colaboraciones y comunicación con otros artistas. El sistema permite a los usuarios crear un perfil profesional, publicar sus habilidades, recibir propuestas, chatear en tiempo real con otros músicos, y buscar proyectos musicales acordes a su estilo.",
-            ["Java", "Typescript", "PostgreSQL", "Springboot", "React"],
-            "https://github.com/2piradrian/seminario-client.git",
+            ["Java", "Typescript", "PostgreSQL", "Springboot", "React"],"https://github.com/2piradrian/seminario-client.git",
             "2025"
         ),
         new Project(
@@ -71,17 +106,16 @@ export default function ViewModel() {
 
     const current = projects[currentProject];
 
-
     // ------------------------------------------
     // FADE ANIMATION
     // ------------------------------------------
     const [isFading, setIsFading] = useState(false);
 
+
     const triggerFade = () => {
         setIsFading(true);
         setTimeout(() => setIsFading(false), 300);
     };
-
 
     return {
         activeSection,
@@ -94,3 +128,5 @@ export default function ViewModel() {
         current
     };
 }
+
+

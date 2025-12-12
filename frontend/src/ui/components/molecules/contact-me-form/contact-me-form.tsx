@@ -3,15 +3,16 @@ import MainButton from "../../atoms/main-button/main-button";
 import SmallTitle from "../../atoms/small-title/small-title";
 import style from "./style.module.css";
 
+
 type Props = {
-    onClick: () => void;
+    onClick: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 export default function ContactMeForm( {onClick}: Props) {
     return(
         <form className={style.container} onSubmit={onClick} >
             <SmallTitle text="Contactame!" />
-            <InputLabel 
-                id="name" 
+            <InputLabel
+                id="name"
                 placeholder="Ingresa tu nombre completo"
                 type="text"
                 required
@@ -22,15 +23,15 @@ export default function ContactMeForm( {onClick}: Props) {
                 type="text"
                 required
             />
-            <InputLabel 
-                id="description"
+            <InputLabel
+                id="message"
                 placeholder="Ingresa tu consulta"
                 type="text"
                 required
             />
-            <MainButton 
+            <MainButton
                 enabled
-                text="Enviar consulta" 
+                text="Enviar consulta"
                 type="submit"
             />
         </form>
