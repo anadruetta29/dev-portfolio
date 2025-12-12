@@ -38,7 +38,7 @@ frontend/dist/
 frontend/dist-ssr/
 frontend/*.local
 frontend/.env
-frontend/.env.*      )
+frontend/.env.*      
 
 
 backend/target/
