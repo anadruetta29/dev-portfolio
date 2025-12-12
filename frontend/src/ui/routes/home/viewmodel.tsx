@@ -56,14 +56,15 @@ export default function ViewModel() {
             const result = await response.json();
 
             if (result.ok) {
-                toast.success("Mensaje enviado correctamente");
+                alert("Mensaje enviado correctamente");
             }
             else {
-                toast.error("Error enviando mensaje: " + result.msg);
+                alert("Error enviando mensaje");
             }
 
 
-        } catch (error) {
+        } 
+        catch (error) {
             console.error("Error enviando mensaje:", error);
             toast.error("Error enviando mensaje");
         }
