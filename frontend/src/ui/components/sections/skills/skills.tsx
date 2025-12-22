@@ -24,9 +24,8 @@ export default function SkillsSection({ id }: Props) {
                         <SmallTitle text="Frontend" />
                         <div className={style.chipRow}>
                             <Chip label="#React" />
-                            <Chip label="#Typescript" />
+                            <Chip label="#TypeScript" />
                             <Chip label="#JavaScript" />
-                            <Chip label="#CSS Modules" />
                         </div>
                     </div>
                 </SlideIn>
