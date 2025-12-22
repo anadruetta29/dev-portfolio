@@ -1,13 +1,13 @@
 .container { 
 	width: 100%; 
-	min-height: 100vh; 
-	padding: 120px 80px 80px; 
-	background-color: var(--dark-primary); 
 	display: flex;
 	flex-direction: column; 
 	align-items: center; 
+	min-height: 100vh; 
+	padding: 120px 80px 80px; 
 	position: relative; 
 	overflow: hidden; 
+	background-color: var(--dark-primary); 
 } 
 
 .title { 
@@ -18,12 +18,12 @@
 }
 
 .title h2 {
-	color: var(--on-primary);
 	font-size: 42px;
 	font-weight: 700;
 	position: relative;
 	text-align: center;
 	letter-spacing: 0.5px;
+	color: var(--on-primary);
 }
 
 .title h2::after {
@@ -34,9 +34,9 @@
 	transform: translateX(-50%);
 	width: 140px;
 	height: 3px;
-	background-color: var(--on-primary);
 	border-radius: 4px;
 	opacity: 0.9;
+	background-color: var(--on-primary);
 }
 
 
@@ -49,27 +49,27 @@
 }
 
 .categoryCard {
-	background: var(--surface-glass-medium);
-	border: 1px solid var(--surface-glass-low);
-	backdrop-filter: blur(6px);
-	padding: 22px 28px;
-	border-radius: 18px;
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
+	backdrop-filter: blur(6px);
+	padding: 22px 28px;
+	border-radius: 18px;
 	transition: background 0.25s ease, transform 0.2s ease;
+	background: var(--surface-glass-medium);
+	border: 1px solid var(--surface-glass-low);
 }
 
 .categoryCard:hover {
-	background: var(--surface-glass-low);
 	transform: translateY(-3px);
+	background: var(--surface-glass-low);
 }
 
 .categoryCard h3 { 
-	color: var(--on-primary) !important;
 	font-size: 22px;
 	font-weight: 600;
 	margin-bottom: 4px;
+	color: var(--on-primary) !important;
 }
 
 .chipRow { 

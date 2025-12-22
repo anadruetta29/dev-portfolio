@@ -1,24 +1,24 @@
 .container {
-    padding: 100px 50px 50px;
     width: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
     overflow: hidden;
+    padding: 100px 50px 50px;
+    min-height: 100vh;
     flex-direction: column;
     align-items: center;
 }
 
 .title { 
-	margin-bottom: 20px; 
-	color: var(--dark-primary); 
-	text-align: center;  
 	width: 100%;
 	display: flex;
+	text-align: center;  
 	justify-content: center;  
+	margin-bottom: 20px; 
+	color: var(--dark-primary); 
 } 
 
 .title h2 {
@@ -33,25 +33,25 @@
     transform: translateX(-50%); 
     width: 70%; 
     height: 4px; 
-    background-color: var(--dark-primary); 
     border-radius: 4px; 
     opacity: 0.9; 
+    background-color: var(--dark-primary); 
 }
 
 .projects {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;              
     justify-content: center; 
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;              
 }
 
 .carouselWrapper {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     margin-top: 30px;
     gap: 20px;
 }
@@ -61,8 +61,8 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--dark-primary);
     transition: transform 0.25s ease;
+    color: var(--dark-primary);
 }
 
 .arrow:hover {
