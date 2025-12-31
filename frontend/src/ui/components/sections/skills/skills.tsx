@@ -25,7 +25,7 @@ export default function SkillsSection({ id }: Props) {
                         <div className={style.chipRow}>
                             <Chip label="#React" />
                             <Chip label="#TypeScript" />
-                            <Chip label="#JavaScript" />
+                            <Chip label="#HTML y CSS" />
                         </div>
                     </div>
                 </SlideIn>
@@ -38,6 +38,7 @@ export default function SkillsSection({ id }: Props) {
                             <Chip label="#PostgreSQL" />
                             <Chip label="#Node Js" />
                             <Chip label="#Express" />
+                            <Chip label="#JavaScript" />
                         </div>
                     </div>
                 </SlideIn>
