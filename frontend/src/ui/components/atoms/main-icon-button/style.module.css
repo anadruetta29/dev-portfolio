@@ -1,14 +1,17 @@
 .container {
-    width: 150px;
-    display: flex;
-    justify-self: center;
-    justify-content: space-evenly; 
+    display: inline-flex;
     align-items: center;
-    height: 45px;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 18px;
+    min-width: 180px;     
+    min-height: 45px;
     border-radius: 12px;
-    font-size: 16px;
     border: 0;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
     color: var(--on-primary);
     background-color: var(--dark-primary);
 }

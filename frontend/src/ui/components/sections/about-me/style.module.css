@@ -53,6 +53,14 @@
     background: var(--shadow-low); 
 }
 
+.informationButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
 .rightSide {
     display: flex;
     justify-content: center;

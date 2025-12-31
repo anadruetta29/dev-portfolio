@@ -1,6 +1,7 @@
 import NavigationDots from "../../components/atoms/navigation-dots/navigation-dots";
 import AbouteMeSection from "../../components/sections/about-me/aboute-me";
 import ContactSection from "../../components/sections/contact/contact";
+import FooterSection from "../../components/sections/footer/footer";
 import HomeSection from "../../components/sections/home/home";
 import ProjectsSection from "../../components/sections/projects/projects";
 import SkillsSection from "../../components/sections/skills/skills";
@@ -14,7 +15,8 @@ export default function HomeRoute() {
         next,
         prev,
         isFading,
-        current
+        current,
+        currentYear
     } = ViewModel();
 
     return (
@@ -36,6 +38,8 @@ export default function HomeRoute() {
             />
 
             <ContactSection id="contact" onClickOnSendEmail={onClickOnSendEmail}/>
+
+            <FooterSection year={currentYear} />
         </Layout>
     );
 }

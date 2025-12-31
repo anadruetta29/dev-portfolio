@@ -17,7 +17,7 @@ export default function ContactSection({ id, onClickOnSendEmail }: Props) {
                 <ContactMeForm onClick={onClickOnSendEmail}/>
             </div>
             <div className={style.contacts}>
-                <ContactItem icon={linkedInIcon} title="LinkedIn" />
+                <ContactItem icon={linkedInIcon} title="LinkedIn" information="ana-druetta-80a4a8342" />
                 <ContactItem icon={emailIcon} title="Email" information="anadruetta2020@gmail.com"/>
                 <ContactItem icon={phoneIcon} title="Teléfono" information="3512056971"/>
             </div>

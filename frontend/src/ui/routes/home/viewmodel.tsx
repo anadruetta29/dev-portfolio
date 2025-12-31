@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Project } from "../../../domain/entity/Project";
+import { Project } from "../../../domain/entity/project.ts";
 
 
 export default function ViewModel() {
@@ -112,6 +112,11 @@ export default function ViewModel() {
         setTimeout(() => setIsFading(false), 300);
     };
 
+    // ------------------------------------------
+    // FOOTER INFORMATION
+    // ------------------------------------------
+    const currentYear = new Date().getFullYear();
+
     return {
         activeSection,
         onClickOnSendEmail,
@@ -120,7 +125,8 @@ export default function ViewModel() {
         next,
         prev,
         isFading,
-        current
+        current,
+        currentYear
     };
 }
 

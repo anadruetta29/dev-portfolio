@@ -2,7 +2,7 @@ import FadeIn from "../../atoms/fade-in/fade-in";
 import ProjectItem from "../../molecules/project-item/project-item";
 import MediumTitle from "../../atoms/medium-title/medium-title";
 import style from "./style.module.css";
-import type { Project } from "../../../../domain/entity/Project";
+import type { Project } from "../../../../domain/entity/project.ts";
 
 type Props = {
     id: string;

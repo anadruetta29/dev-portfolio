@@ -35,4 +35,6 @@
 
 	--surface-glass-low: rgba(255, 255, 255, 0.10);
 	--surface-glass-medium: rgba(255, 255, 255, 0.14);
+
+	--footer-color: #262338; 
 }
