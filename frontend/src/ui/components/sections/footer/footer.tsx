@@ -27,6 +27,16 @@ export default function FooterSection( { year } : Props) {
                         <span className={style.communication}>Revisá mis proyectos en GitHub</span>
                         <span className={style.communication}>Escribime por Mail</span>
                     </div>
+                    {/* <div className={style.leftSide}>
+                        <LanguageSelector
+                            value={currentLanguage}
+                            options={[
+                                { value: "es", label: "ES" },
+                                { value: "en", label: "EN" }
+                            ]}
+                            onChange={changeLanguage}
+                        />
+                    </div> */}
                 </div>
                 <span className={style.copyright}>
                     © {year} Ana Druetta — Todos los derechos reservados
