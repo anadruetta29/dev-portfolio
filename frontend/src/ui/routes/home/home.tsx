@@ -2,7 +2,6 @@ import NavigationDots from "../../components/atoms/navigation-dots/navigation-do
 import AbouteMeSection from "../../components/sections/about-me/aboute-me";
 import ContactSection from "../../components/sections/contact/contact";
 import FooterSection from "../../components/sections/footer/footer";
-import HomeSection from "../../components/sections/home/home";
 import ProjectsSection from "../../components/sections/projects/projects";
 import SkillsSection from "../../components/sections/skills/skills";
 import Layout from "../../layout/layout";
@@ -11,7 +10,6 @@ import ViewModel from "./viewmodel";
 export default function HomeRoute() {
     const { 
         activeSection,
-        onClickOnSendEmail,
         next,
         prev,
         isFading,
@@ -23,12 +21,8 @@ export default function HomeRoute() {
         <Layout withHeader={true}>
             <NavigationDots activeSection={activeSection} />
 
-            <HomeSection id="home" />
-
             <AbouteMeSection id="about-me" />
-        
-            <SkillsSection id="skills" />
-
+            
             <ProjectsSection 
                 id="projects" 
                 next={next}     
@@ -36,8 +30,11 @@ export default function HomeRoute() {
                 isFading={isFading}  
                 current={current}   
             />
+        
+            <SkillsSection id="skills" />
 
-            <ContactSection id="contact" onClickOnSendEmail={onClickOnSendEmail}/>
+
+            <ContactSection id="contact" />
 
             <FooterSection year={currentYear} />
         </Layout>

@@ -17,13 +17,11 @@ export default function AbouteMeSection({ id }: Props) {
             <div className={style.leftSide}>
 
                 <FadeIn delay={0}>
-                    <div className={style.roleTag}>Desarrolladora de Software</div>
+                    <div className={style.titleInformation}>
+                        <div className={style.roleTag}>Desarrolladora de Software</div>
+                        <LargeTitle text="Hola! Soy Ana" />
+                    </div>
                 </FadeIn>
-
-                <FadeIn delay={0.2}>
-                    <LargeTitle text="Hola! Soy Ana" />
-                </FadeIn>
-
 
                 <FadeIn delay={0.4}>
                     <p className={style.description}>

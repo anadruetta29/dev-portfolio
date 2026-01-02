@@ -6,14 +6,14 @@ export default function ViewModel() {
     // ------------------------------------------
     // SECTION SCROLL LISTENER
     // ------------------------------------------
-    const [activeSection, setActiveSection] = useState("home");
+    const [activeSection, setActiveSection] = useState("about-me");
 
 
     useEffect(() => {
         const sections = document.querySelectorAll("section");
 
         function handleScroll() {
-            let current = "home";
+            let current = "about-me";
             const scrollPos = window.scrollY + 200;
 
 
@@ -30,39 +30,6 @@ export default function ViewModel() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // ------------------------------------------
-    // EMAIL ACTION
-    // ------------------------------------------
-    const onClickOnSendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-
-        const form = event.currentTarget;
-
-        try {
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData) as {
-                name?: string;
-                email?: string;
-                message?: string;
-            };
-
-            const response = await fetch("http://localhost:4000/api/email/send", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
-
-            const result = await response.json();
-
-            if (result.ok) {
-                alert("Mensaje enviado correctamente");
-                form.reset();
-            }
-        } 
-        catch (error) {
-            alert("Error enviando mensaje");
-        }
-    };
 
     // ------------------------------------------
     // PROJECTS CAROUSEL
@@ -119,7 +86,6 @@ export default function ViewModel() {
 
     return {
         activeSection,
-        onClickOnSendEmail,
         projects,
         currentProject,
         next,
