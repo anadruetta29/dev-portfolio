@@ -12,13 +12,15 @@ type Props = {
 export default function ContactSection({ id }: Props) {
     return (
         <section id={id} className={style.container}>
-            <div className={style.title}>
-                <MediumTitle text="Contactame" />
+            <div>
+                <div className={style.title}>
+                    <MediumTitle text="Contactame" />
+                </div>
+                <p className={style.subtitle}>
+                    ¿Tenés una idea, proyecto o propuesta?  
+                    Estoy abierta a nuevas oportunidades.
+                </p>
             </div>
-            <p className={style.subtitle}>
-                ¿Tenés una idea, proyecto o propuesta?  
-                Estoy abierta a nuevas oportunidades.
-            </p>
             <div className={style.contactsWrapper}>
                 <div className={style.contacts}>
                     <ContactItem icon={linkedInIcon} title="LinkedIn" information="ana-druetta-80a4a8342" />
