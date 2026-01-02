@@ -11,14 +11,31 @@
     background-color: var(--dark-primary);
 }
 
-.leftSide {
+.container::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(
+        circle,
+        var(--primary-soft),
+        transparent 70%
+    );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+
+.informationSide {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px; 
 }
 
-.leftSide h1 {
+.informationSide h1 {
     max-width: 680px;
     color: var(--on-primary);
     line-height: 1.1;
@@ -28,38 +45,65 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px; 
+    gap: 10px;
+}
+
+.heroTitle {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nameHighlight {
+    font-size: 96px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: color-mix(in srgb, var(--primary) 70%, var(--on-primary));
 }
 
 .roleTag {
-    display: flex;
-    align-items: center;
-    font-size: 17px;
-    gap: 8px;
-    padding-left: 6px;
-    margin-bottom: 0; 
-    color: var(--on-primary);
-    border-left: 3px solid var(--on-primary);
-    opacity: 0.85;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--surface-glass-low);
+    color: var(--text-soft);
+    border: 1px solid var(--glass-border);
 }
-
 
 .description {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 14px 18px;
-    border-radius: 14px;
-    backdrop-filter: blur(2px);
-    color: var(--on-primary);
-    background: var(--surface-glass-medium);
-    line-height: 1.6;
+    max-width: 620px;
+    margin: 16px auto 0;
+    padding-bottom: 14px;
+    color: var(--text-soft);
+    line-height: 1.7;
+    font-size: 17px;
+    border-bottom: 1px solid var(--glass-border);
 }
+
 
 .informationButtons {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 14px;
+}
+
+.illustrationSide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.illustrationSide img {
+  width:  380px;
+  max-width: 100%;
+  opacity: 0.85;
+  filter: drop-shadow(0 20px 40px var(--overlay-backdrop));
 }
 
 @media (max-width: 701px) {
@@ -96,6 +140,10 @@
         flex-direction: column;
         gap: 10px;
         width: 100%;
+    }
+
+    .rightSide {
+        display: none;
     }
 
 }
