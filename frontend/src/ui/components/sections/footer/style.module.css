@@ -2,8 +2,7 @@ footer {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     background-color: var(--dark-primary);
-/*     border-top: 1px solid var(--surface-glass-medium);
- */}
+}
 
 .container {
     margin: 0 auto;
@@ -85,5 +84,46 @@ footer {
     font-size: 14px;
     text-align: center;
     color: var(--text-soft);
+}
+
+@media (max-width: 701px) {
+    footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .container {
+        padding: 40px 24px 28px;
+        gap: 24px;
+    }
+
+    .information {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .leftSide,
+    .rightSide {
+        padding: 18px;
+    }
+
+    .leftSide h3,
+    .rightSide h3 {
+        font-size: 14px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .communication {
+        font-size: 13px;
+    }
+
+    .copyright {
+        margin-top: 24px;
+        font-size: 13px;
+    }
 }
 

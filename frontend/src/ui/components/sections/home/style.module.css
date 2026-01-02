@@ -16,7 +16,7 @@
     flex-direction: column;
     gap: 20px;
     z-index: 2;
-    color: var(--on-primary)
+    color: var(--on-primary);
 }
 
 .middleInformation img {
@@ -31,4 +31,17 @@
     transform: translateY(-10px) scale(1.03);
 }
 
+@media (max-width: 701px) {
+    .container {
+        padding: 80px 24px 40px;
+        min-height: auto;
+    }
 
+    .middleInformation {
+        gap: 16px;
+    }
+
+    .middleInformation img {
+        width: 180px;
+    }
+}

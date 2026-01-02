@@ -26,5 +26,27 @@
     flex: 1;
 }
 
+@media (max-width: 701px) {
+    .container {
+        flex-direction: column;
+        min-height: auto;
+        padding: 80px 24px 40px;
+        gap: 48px;
+    }
+
+    .contactForm {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contacts {
+        max-width: 100%;
+        padding: 16px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
 
 
