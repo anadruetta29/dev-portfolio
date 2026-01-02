@@ -6,11 +6,15 @@
     border-radius: 14px;
     background: var(--dark-primary);
     color: var(--on-primary);
-    box-shadow: 0 6px 18px var(--shadow-low);
+    box-shadow: 0 4px 12px var(--shadow-low);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    width: 300px;      
-    max-width: 100%;
 }
+
+.container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px var(--overlay-backdrop);
+}
+
 
 .header {
     display: flex;
@@ -43,4 +47,19 @@
     opacity: 0.85;
     line-height: 1.3;
     white-space: nowrap;   
+}
+
+.link {
+    all: unset;
+    color: var(--on-primary);
+    font-size: 13px;
+    opacity: 0.85;
+    line-height: 1.3;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.link:hover {
+    opacity: 1;
+    text-decoration: underline;
 }

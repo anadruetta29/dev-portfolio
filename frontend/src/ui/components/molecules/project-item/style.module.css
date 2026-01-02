@@ -1,6 +1,5 @@
 .container {
-    width: 100%;
-    max-width: 900px;
+    width: 900px;
     display: flex;
     flex-direction: column;
     border-radius: 18px;
@@ -11,7 +10,6 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     background: var(--dark-primary);
     border: 1px solid var(--surface-glass-medium);
-    min-width: 900px;
 }
 
 .container:hover {

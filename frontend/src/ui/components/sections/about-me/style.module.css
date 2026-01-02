@@ -16,12 +16,10 @@
     flex-direction: column;
     align-items: center;
     gap: 30px; 
-    margin: 0 auto;
 }
 
 .leftSide h1 {
     max-width: 680px;
-    margin: 0 auto;
     color: var(--on-primary);
     line-height: 1.1;
 }

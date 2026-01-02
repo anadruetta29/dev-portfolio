@@ -37,4 +37,9 @@
 	--surface-glass-medium: rgba(255, 255, 255, 0.14);
 
 	--footer-color: #262338; 
+
+    --primary-soft: rgba(167, 139, 250, 0.18); 
+    --primary-soft-2: rgba(109, 40, 217, 0.12); 
+    --glass-border: rgba(167, 139, 250, 0.35);
+    --glass-highlight: rgba(255, 255, 255, 0.35);
 }
