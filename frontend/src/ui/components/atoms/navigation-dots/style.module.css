@@ -25,3 +25,9 @@
 	mix-blend-mode: normal; 
 	transform: scale(1.2);
 }
+
+@media (max-width: 701px) {
+    .container {
+        display: none;
+    }
+}
