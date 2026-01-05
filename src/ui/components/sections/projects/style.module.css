@@ -70,11 +70,11 @@
 }
 
 .slide {
-    width: 85%;
     max-width: 1100px;
     display: flex;
     justify-content: center;
     transition: opacity 0.3s ease;
+    min-height: 280px;
 }
 
 @media (max-width: 701px) {
