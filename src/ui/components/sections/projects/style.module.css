@@ -4,7 +4,7 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -55,6 +55,7 @@
     justify-content: center;
     margin-top: 30px;
     gap: 20px;
+    min-height: 360px;
 }
 
 .arrow {
