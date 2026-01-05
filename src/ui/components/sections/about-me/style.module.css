@@ -1,0 +1,150 @@
+.container {
+    width: 100%;
+    padding: 100px 50px 50px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--dark-primary);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(
+        circle,
+        var(--primary-soft),
+        transparent 70%
+    );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+
+.informationSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+}
+
+.informationSide h1 {
+    max-width: 680px;
+    color: var(--on-primary);
+    line-height: 1.1;
+}
+
+.titleInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.heroTitle {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nameHighlight {
+    font-size: 96px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: color-mix(in srgb, var(--primary) 70%, var(--on-primary));
+}
+
+.roleTag {
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--surface-glass-low);
+    color: var(--text-soft);
+    border: 1px solid var(--glass-border);
+}
+
+.description {
+    max-width: 620px;
+    margin: 16px auto 0;
+    padding-bottom: 14px;
+    color: var(--text-soft);
+    line-height: 1.7;
+    font-size: 17px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+
+.informationButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.illustrationSide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.illustrationSide img {
+  width:  380px;
+  max-width: 100%;
+  opacity: 0.85;
+  filter: drop-shadow(0 20px 40px var(--overlay-backdrop));
+}
+
+@media (max-width: 701px) {
+    .container {
+        flex-direction: column;
+        padding: 80px 24px 40px;
+        min-height: auto;
+    }
+
+    .leftSide {
+        align-items: center;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .leftSide h1 {
+        max-width: 100%;
+        font-size: clamp(32px, 8vw, 42px);
+    }
+
+    .roleTag {
+        justify-content: center;
+        border-left: none;
+        padding-left: 0;
+        font-size: 18px;
+    }
+
+    .description {
+        max-width: 100%;
+        padding: 12px 16px;
+    }
+
+    .informationButtons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .rightSide {
+        display: none;
+    }
+
+}
+

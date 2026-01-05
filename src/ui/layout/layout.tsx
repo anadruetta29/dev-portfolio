@@ -1,6 +1,6 @@
-import style from "./style.module.css";
 import "../styles/global.css";
 import Header from "../components/molecules/header/header";
+import style from "./style.module.css";
 
 type Props = {
     children: React.ReactNode;

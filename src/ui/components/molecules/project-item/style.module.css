@@ -1,0 +1,80 @@
+.container {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    backdrop-filter: blur(8px);
+    padding: 28px;
+    gap: 20px;
+    box-shadow: 0 8px 26px var(--shadow-low);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: var(--dark-primary);
+    border: 1px solid var(--surface-glass-medium);
+}
+
+.container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px var(--surface-glass-medium);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h3 {
+    color: var(--on-primary);
+}
+
+.year {
+    color: var(--primary);
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.description {
+    text-align: justify;
+    line-height: 1.55;
+    opacity: 0.95;
+    color: var(--on-primary);
+}
+
+.techList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.techTag { 
+    padding: 6px 12px; 
+    border-radius: 50px; 
+    font-size: 13px; 
+    backdrop-filter: blur(4px); 
+    background: var(--surface-glass-low); 
+    color: var(--on-primary); 
+    border: 1px solid var(--surface-glass-medium); 
+}
+
+.techTag:hover {
+    transform: translateY(-2px);
+    background: var(--primary);
+    color: var(--dark-primary);
+}
+
+.githubButton {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.25s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px var(--shadow-low);
+    background: var(--primary);
+    color: var(--dark-primary);
+}
+
+.githubButton:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}

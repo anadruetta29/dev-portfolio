@@ -1,0 +1,48 @@
+.select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 36px 10px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--on-primary);
+    background-color: var(--surface-glass-low);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.select:hover {
+    border-color: var(--primary-soft);
+}
+
+.select:focus {
+    border-color: var(--primary);
+}
+
+.selectWrapper {
+    position: relative;
+    width: fit-content;
+}
+
+.selectWrapper::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--text-soft);
+    border-bottom: 2px solid var(--text-soft);
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+}
+
+.select option {
+    background-color: var(--dark-primary);
+    color: var(--on-primary);
+}

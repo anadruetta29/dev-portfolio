@@ -1,0 +1,22 @@
+.container {
+    display: inline-block;
+    perspective: 800px;
+}
+
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    transform-origin: center center;
+    transform: rotate(0deg);
+    border-radius: 6px;
+    box-shadow: 0 4px 10px var(--shadow-low);
+}
+
+
+.container:hover .image {
+    transform: rotate(var(--degrees));
+    box-shadow: 0 10px 20px var(--shadow-low);
+}
