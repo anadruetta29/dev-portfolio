@@ -113,7 +113,6 @@
         min-height: auto;
         align-items: flex-start; 
         text-align: center;
-        padding-top: 25px;
     }
 
     .container::before {
@@ -122,20 +121,17 @@
         opacity: 0.6;
     }
 
-    .titleInformation {
-        padding-bottom: 0;
+    .informationSide {
+        gap: 10px;
     }
 
     .heroTitle {
         gap: 10px;
-        padding-bottom: 0;
-        padding-top: 40px;
     }
 
     .description {
         max-width: 100%;
         font-size: 16px;
-        padding-top: 0;
     }
 
     .informationButtons {
