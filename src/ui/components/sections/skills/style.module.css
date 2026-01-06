@@ -85,16 +85,6 @@
         align-items: stretch; 
     }
 
-    .title {
-        margin-bottom: 32px;
-    }
-
-    .title h2::after {
-        width: 72px;
-        height: 3px;
-        bottom: -8px;
-    }
-
     .technologies {
         grid-template-columns: 1fr;
         gap: 24px; 
