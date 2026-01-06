@@ -56,4 +56,25 @@
     width: 100%;
 }
 
+@media (max-width: 701px) {
+    .inner {
+        display: flex;
+        justify-content: center; 
+    }
 
+    .nav {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .nav a {
+        display: flex;
+        text-align: center; 
+    }
+
+    .nav a::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
