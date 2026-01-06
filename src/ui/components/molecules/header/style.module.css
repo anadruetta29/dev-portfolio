@@ -58,6 +58,6 @@
 
 @media (max-width: 701px) {
     .header {
-        display: none !important;
+        display: none;
     }
 }
