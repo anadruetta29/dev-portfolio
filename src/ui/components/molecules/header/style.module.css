@@ -56,18 +56,4 @@
     width: 100%;
 }
 
-@media (max-width: 701px) {
-    .header {
-        height: 60px;
-    }
-
-    .inner {
-        flex-direction: row; 
-        justify-content: center;
-    }
-
-    .nav {
-        display: none;
-    }
-}
 
