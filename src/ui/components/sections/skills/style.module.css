@@ -89,10 +89,6 @@
         margin-bottom: 32px;
     }
 
-    .title h2 {
-        font-size: clamp(28px, 7vw, 34px); 
-    }
-
     .title h2::after {
         width: 72px;
         height: 3px;
