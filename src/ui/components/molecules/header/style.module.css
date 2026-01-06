@@ -58,9 +58,10 @@
 
 @media (max-width: 701px) {
     .header {
-        padding-left: 3px;
-        padding-right: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
+
     .inner {
         display: flex;
         justify-content: center; 
