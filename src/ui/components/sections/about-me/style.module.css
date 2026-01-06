@@ -93,17 +93,17 @@
 }
 
 .illustrationSide {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  pointer-events: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
 }
 
 .illustrationSide img {
-  width:  380px;
-  max-width: 100%;
-  opacity: 0.85;
-  filter: drop-shadow(0 20px 40px var(--overlay-backdrop));
+    width:  380px;
+    max-width: 100%;
+    opacity: 0.85;
+    filter: drop-shadow(0 20px 40px var(--overlay-backdrop));
 }
 
 
@@ -127,6 +127,10 @@
 
     .heroTitle {
         gap: 10px;
+    }
+
+    .nameHighlight {
+        font-size: clamp(48px, 14vw, 64px);
     }
 
     .description {
