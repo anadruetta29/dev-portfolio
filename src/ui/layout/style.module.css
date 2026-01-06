@@ -2,3 +2,9 @@
     align-items: center !important;
     justify-content: flex-start !important;
 }
+
+@media (max-width: 701px) {
+    .customContainer {
+        padding-top: 80px;
+    }
+}

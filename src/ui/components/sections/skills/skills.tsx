@@ -39,6 +39,7 @@ export default function SkillsSection({ id }: Props) {
                             <Chip label="#Node Js" />
                             <Chip label="#Express" />
                             <Chip label="#JavaScript" />
+                            <Chip label="#Pyhton" />
                         </div>
                     </div>
                 </SlideIn>

@@ -64,22 +64,29 @@
 
 @media (max-width: 701px) {
     .container {
-        flex-direction: column;
         min-height: auto;
         padding: 80px 24px 40px;
-        gap: 48px;
-    }
-
-    .contactForm {
-        width: 100%;
-        justify-content: center;
+        gap: 36px;
+        align-items: stretch;
     }
 
     .contacts {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
+    .title h2::after {
+        width: 65%;
+        height: 3px;
+        bottom: -8px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        max-width: 100%;
+    }
 }
+
 
 
 

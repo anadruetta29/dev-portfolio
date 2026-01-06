@@ -83,6 +83,8 @@
     .container {
         padding: 80px 24px 40px;
         min-height: auto;
+        align-items: stretch; 
+        text-align: center;
     }
 
     .title {
@@ -90,26 +92,25 @@
     }
 
     .title h2::after {
-        width: 50%;
+        width: 60%;
         height: 3px;
         bottom: -8px;
-    }
-
-    .projects {
-        gap: 12px;
     }
 
     .carouselWrapper {
         margin-top: 20px;
         gap: 12px;
+        min-height: 340px; 
     }
 
     .arrow {
         font-size: 32px;
+        padding: 6px; 
     }
 
     .slide {
         width: 100%;
+        min-height: 340px; 
     }
 }
 

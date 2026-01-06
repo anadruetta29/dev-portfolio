@@ -106,34 +106,38 @@
   filter: drop-shadow(0 20px 40px var(--overlay-backdrop));
 }
 
+
 @media (max-width: 701px) {
     .container {
         flex-direction: column;
         padding: 80px 24px 40px;
         min-height: auto;
-    }
-
-    .leftSide {
-        align-items: center;
+        align-items: flex-start; 
         text-align: center;
-        gap: 14px;
     }
 
-    .leftSide h1 {
-        max-width: 100%;
-        font-size: clamp(32px, 8vw, 42px);
+    .container::before {
+        width: 260px;
+        height: 260px;
+        opacity: 0.6;
     }
 
-    .roleTag {
-        justify-content: center;
-        border-left: none;
-        padding-left: 0;
-        font-size: 18px;
+    .informationSide {
+        gap: 20px;
+    }
+
+    .nameHighlight {
+        font-size: clamp(48px, 14vw, 64px); 
+    }
+
+    .heroTitle {
+        gap: 10px;
     }
 
     .description {
         max-width: 100%;
         padding: 12px 16px;
+        font-size: 16px;
     }
 
     .informationButtons {
@@ -142,9 +146,9 @@
         width: 100%;
     }
 
-    .rightSide {
+    .illustrationSide {
         display: none;
     }
-
 }
+
 
