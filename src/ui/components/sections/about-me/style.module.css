@@ -121,11 +121,7 @@
         height: 260px;
         opacity: 0.6;
     }
-
-    .informationSide {
-        gap: 10px;
-    }
-
+    
     .heroTitle {
         gap: 10px;
         padding-bottom: 0;
