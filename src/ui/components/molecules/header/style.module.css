@@ -59,5 +59,6 @@
 @media (max-width: 701px) {
     .header {
         display: none;
+        padding: 0;
     }
 }
