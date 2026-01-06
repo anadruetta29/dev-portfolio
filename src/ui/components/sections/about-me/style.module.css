@@ -110,7 +110,6 @@
 @media (max-width: 701px) {
     .container {
         flex-direction: column;
-        padding: 80px 24px 40px;
         min-height: auto;
         align-items: flex-start; 
         text-align: center;
@@ -124,10 +123,6 @@
 
     .informationSide {
         gap: 20px;
-    }
-
-    .nameHighlight {
-        font-size: clamp(48px, 14vw, 64px); 
     }
 
     .heroTitle {
