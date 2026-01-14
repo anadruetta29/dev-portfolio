@@ -23,9 +23,9 @@ export default function SkillsSection({ id }: Props) {
                     <div className={style.categoryCard}>
                         <SmallTitle text="Frontend" />
                         <div className={style.chipRow}>
-                            <Chip label="#React" />
-                            <Chip label="#TypeScript" />
-                            <Chip label="#HTML y CSS" />
+                            <Chip label="React" />
+                            <Chip label="TypeScript" />
+                            <Chip label="HTML y CSS" />
                         </div>
                     </div>
                 </SlideIn>
@@ -33,13 +33,13 @@ export default function SkillsSection({ id }: Props) {
                     <div className={style.categoryCard}>
                         <SmallTitle text="Backend" />
                         <div className={style.chipRow}>
-                            <Chip label="#Java" />
-                            <Chip label="#Springboot" />
-                            <Chip label="#PostgreSQL" />
-                            <Chip label="#Node Js" />
-                            <Chip label="#Express" />
-                            <Chip label="#JavaScript" />
-                            <Chip label="#Pyhton" />
+                            <Chip label="Java" />
+                            <Chip label="Springboot" />
+                            <Chip label="PostgreSQL" />
+                            <Chip label="Node Js" />
+                            <Chip label="Express" />
+                            <Chip label="JavaScript" />
+                            <Chip label="Pyhton" />
                         </div>
                     </div>
                 </SlideIn>
@@ -47,7 +47,7 @@ export default function SkillsSection({ id }: Props) {
                     <div className={style.categoryCard}>
                         <SmallTitle text="Despliegue" />
                         <div className={style.chipRow}>
-                            <Chip label="#Docker" />
+                            <Chip label="Docker" />
                         </div>
                     </div>
                 </SlideIn>
@@ -55,7 +55,7 @@ export default function SkillsSection({ id }: Props) {
                     <div className={style.categoryCard}>
                         <SmallTitle text="Control de versiones" />
                         <div className={style.chipRow}>
-                            <Chip label="#GitHub" />
+                            <Chip label="GitHub" />
                         </div>
                     </div>
                 </SlideIn>
