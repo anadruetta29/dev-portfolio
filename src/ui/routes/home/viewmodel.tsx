@@ -50,7 +50,7 @@ export default function ViewModel() {
         ),
         new Project(
             "Match Score Bot Server",
-            "Match Score Bot Server es una API de backend para un chatbot conversacional que califica un interés romántico potencial del 1 al 10 basándose en las respuestas del usuario",
+            "Match Score Bot Server es una API de backend para un chatbot conversacional que califica un interés romántico potencial del 1 al 10 basándose en las respuestas del usuario.",
             ["Pyhton", "PostgreSQL", "FastAPI", "WebSocket", "SQLAlchemy", "Pydantic", "JSON"],
             "https://github.com/anadruetta29/match-bot-server",
             "2026"
