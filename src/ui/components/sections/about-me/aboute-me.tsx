@@ -1,6 +1,5 @@
 import FadeIn from "../../atoms/fade-in/fade-in";
 import LargeTitle from "../../atoms/large-title/large-title";
-import cv from "../../../../../public/cv/CV - Ana Druetta.pdf";
 import githubIcon from "../../../assets/icons/github.svg";
 import docIcon from "../../../assets/icons/document.svg";
 import MainIconButton from "../../atoms/main-icon-button/main-icon-button";
@@ -50,7 +49,7 @@ export default function AbouteMeSection({ id }: Props) {
                             type="button"
                             enabled={true}
                             icon={docIcon}
-                            onClick={() => window.open(cv, "_blank")}
+                            onClick={() => window.open("/cv/CV - Ana Druetta.pdf", "_blank")}
                         />
                     </div>
                 </FadeIn>

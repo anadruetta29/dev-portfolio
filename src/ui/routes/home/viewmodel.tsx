@@ -54,7 +54,21 @@ export default function ViewModel() {
             ["Pyhton", "PostgreSQL", "FastAPI", "WebSocket", "SQLAlchemy", "Pydantic", "JSON"],
             "https://github.com/anadruetta29/match-bot-server",
             "2026"
-        )
+        ),
+        new Project(
+            "PeluGest Backend",
+            "API REST para un sistema de gestión de peluquerías. Permite administrar clientes, turnos, servicios, productos y stock.",
+            ["NodeJS", "Express", "Typescript", "PostgreSQL", "Prisma", "REST API"],
+            "https://github.com/anadruetta29/pelugest-backend",
+            "2026"
+        ),
+        new Project(
+            "PeluGest Web",
+            "Aplicación web para la gestión de peluquerías. Interfaz para administrar clientes, turnos, servicios y productos, conectada a una API REST.",
+            ["React", "TypeScript"],
+            "https://github.com/anadruetta29/pelugest-frontend",
+            "2026"
+        ),
     ];
 
     const [currentProject, setCurrentProject] = useState(0);
